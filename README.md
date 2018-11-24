@@ -7,16 +7,14 @@
 ## Install
 
 ```bash
-npm install --save classnamed-components
+npm install classnamed-components
 ```
 
 ## Usage
 
 ```tsx
 import * as React from 'react'
-
 import { classnamed } from 'classnamed-components'
-
 const MyButton = classnamed('button')`btn shadow
   ${props => ({
     big: 'btn-lg',
