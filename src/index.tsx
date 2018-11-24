@@ -1,23 +1,26 @@
-/**
- * @class ExampleComponent
- */
-
 import * as React from 'react'
-
-import styles from './styles.css'
-
 export type Props = { text: string }
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+const zip = (strings: string[], expressions: any[], props: any) => {
+  const newStrings = [strings[0]]
+  for (let index = 1; index < strings.length; index++) {
+    const expression = expressions[index - 1];
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
+    if (typeof expression === 'function') {
+      newStrings.push(String(expression(props)))
+    } else {
+      newStrings.push(String(expression))
+    }
+    newStrings.push(strings[index])
   }
+  const className = newStrings.join('')
+  // TODO: validate class names
+  return className;
 }
+
+export const classnamed = (ClassnamedComponent: typeof React.Component) =>
+  (strings: string[], ...expressions:any[]) =>
+    ({className, as: AsComponent, ...props}: {className: string, as: typeof React.Component}) => {
+      const Component = AsComponent || ClassnamedComponent;
+      return <Component className={`${zip(strings, expressions, props)} ${className}`} {...props}/>
+    }

@@ -15,12 +15,19 @@ npm install --save classnamed-components
 ```tsx
 import * as React from 'react'
 
-import MyComponent from 'classnamed-components'
+import { classnamed } from 'classnamed-components'
+
+const MyButton = classnamed('button')`btn shadow
+  ${props => ({
+    big: 'btn-lg',
+    small: 'btn-sm',
+  }[props.size])}
+`
 
 class Example extends React.Component {
   render () {
     return (
-      <MyComponent />
+      <MyButton size="big" />
     )
   }
 }
