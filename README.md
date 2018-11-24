@@ -15,20 +15,22 @@ npm install classnamed-components
 ```tsx
 import * as React from 'react'
 import { classnamed } from 'classnamed-components'
-const MyButton = classnamed('button')`btn shadow
+
+const MyButton = classnamed('button')`
+  btn shadow
   ${props => ({
     big: 'btn-lg',
     small: 'btn-sm',
   }[props.size])}
 `
+const MySection = classNamed("section")`px-6 py-4 bg-white`;
 
-class Example extends React.Component {
-  render () {
-    return (
-      <MyButton size="big" />
-    )
-  }
-}
+const MyExample = (props) => (
+  <MySection/>
+    <MyButton size="big" />
+    <MyButton size="small" className="ml-2" />
+  <MySection/>
+)
 ```
 
 ## License
