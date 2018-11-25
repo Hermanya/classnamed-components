@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`classnamed renders 1`] = `
+<section
+  className="px-6 py-4 bg-white"
+/>
+`;
+
+exports[`classnamed renders with an additional className 1`] = `
+<section
+  className="px-6 py-4 bg-white text-dark"
+/>
+`;
+
+exports[`classnamed renders with an additional className 2`] = `
+<button
+  className="btn shadow btn-sm"
+  size="small"
+>
+  small
+</button>
+`;
+
+exports[`classnamed renders with an additional className 3`] = `
+<button
+  className="btn shadow"
+>
+  regular
+</button>
+`;

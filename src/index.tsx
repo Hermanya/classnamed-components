@@ -1,7 +1,7 @@
 import * as React from 'react'
 export type Props = { text: string }
 
-const zip = (strings: string[], expressions: any[], props: any) => {
+const zip = (strings: TemplateStringsArray, expressions: any[], props: any) => {
   const newStrings = [strings[0]]
   for (let index = 1; index < strings.length; index++) {
     const expression = expressions[index - 1];
@@ -18,9 +18,14 @@ const zip = (strings: string[], expressions: any[], props: any) => {
   return className;
 }
 
-export const classnamed = (ClassnamedComponent: typeof React.Component) =>
-  (strings: string[], ...expressions:any[]) =>
-    ({className, as: AsComponent, ...props}: {className: string, as: typeof React.Component}) => {
-      const Component = AsComponent || ClassnamedComponent;
-      return <Component className={`${zip(strings, expressions, props)} ${className}`} {...props}/>
-    }
+export const classnamed = (ClassnamedComponent: typeof React.Component | string) =>
+(strings: TemplateStringsArray, ...expressions:any[]) =>
+({className, as: AsComponent, ...props}: {className?: string, as?: typeof React.Component}) => {
+  const Component = AsComponent || ClassnamedComponent;
+  return <Component
+    className={
+      `${zip(strings, expressions, props)} ${className || ''}`
+        .replace(/\s+/g, ' ').trim()
+      } {...props}/>
+}
+export const classNamed = classnamed
