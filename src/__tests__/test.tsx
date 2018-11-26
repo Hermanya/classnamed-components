@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {create} from 'react-test-renderer';
-import {classnamed} from './'
+import {classnamed} from '..'
 
 describe('classnamed', () => {
   it('renders', () => {
@@ -37,5 +37,17 @@ describe('classnamed', () => {
     expect(create(
       <MyButton>regular</MyButton>
     ).toJSON()).toMatchSnapshot();
+
+    expect(create(
+      <MyButton as="a">link</MyButton>
+    ).toJSON()).toMatchSnapshot();
+  })
+
+  it('renders with no initial className', () => {
+    const MySection = classnamed("section")``;
+    const component = create(
+      <MySection></MySection>
+    ).toJSON();
+    expect(component).toMatchSnapshot()
   })
 })

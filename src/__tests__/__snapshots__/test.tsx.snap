@@ -28,3 +28,17 @@ exports[`classnamed renders with an additional className 3`] = `
   regular
 </button>
 `;
+
+exports[`classnamed renders with an additional className 4`] = `
+<a
+  className="btn shadow"
+>
+  link
+</a>
+`;
+
+exports[`classnamed renders with no initial className 1`] = `
+<section
+  className=""
+/>
+`;
