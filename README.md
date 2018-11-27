@@ -2,9 +2,11 @@
 
 > Do you ever wish there was something like styled-components but for @tachyons_css, @tailwindcss and other #functionalCSS frameworks? There is now!
 
+[![Build Status](https://travis-ci.org/Hermanya/classnamed-components.svg?branch=master)](https://travis-ci.org/Hermanya/classnamed-components)
+[![codecov](https://codecov.io/gh/Hermanya/classnamed-components/branch/master/graph/badge.svg)](https://codecov.io/gh/Hermanya/classnamed-components)
 [![NPM](https://img.shields.io/npm/v/classnamed-components.svg)](https://www.npmjs.com/package/classnamed-components)
 ![npm](https://img.shields.io/npm/dt/classnamed-components.svg)
-![size](https://img.badgesize.io/hermanya/classnamed-components/master/src/index.tsx.svg)
+![size](https://badgen.net/bundlephobia/minzip/classnamed-components)
 
 
 [Website with examples](https://hermanya.github.io/classnamed-components/)
@@ -55,7 +57,7 @@ const MyButton = classnamed('button')`
 
 ## API
 
-| classNamed is the default export
+> classNamed is the default export
 
 | prop | type                      | default | description                |
 | ---- | ------------------------- | ------- | -------------------------- |
