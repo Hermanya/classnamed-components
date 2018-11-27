@@ -63,10 +63,10 @@ export default class App extends Component {
           <Code>npm install classnamed-components</Code>
           <Code language="javascript">{`import * as React from 'react'
 import {
-  classnamed
+  classNamed
 } from 'classnamed-components'
 // Similarly to styled-components
-const MyButton = classnamed('button')\`
+const MyButton = classNamed('button')\`
   btn shadow-sm
   \${props => ({
     big: 'btn-lg',

@@ -21,7 +21,7 @@
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
-    "cover": "jest --coverage --coverageReporters html lcov && codecov"
+    "cover": "npm run test --coverage --coverageReporters html lcov && codecov"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",

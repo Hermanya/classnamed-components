@@ -1,10 +1,9 @@
 # classnamed-components
 
-> Make react components with functional CSS
+> Do you ever wish there was something like styled-components but for @tachyons_css, @tailwindcss and other #functionalCSS frameworks? There is now!
 
 [![NPM](https://img.shields.io/npm/v/classnamed-components.svg)](https://www.npmjs.com/package/classnamed-components)
 ![npm](https://img.shields.io/npm/dt/classnamed-components.svg)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![size](https://img.badgesize.io/hermanya/classnamed-components/master/src/index.tsx.svg)
 
 
