@@ -23,13 +23,14 @@ describe('classnamed', () => {
     type myButtonProps = {
       size?: 'big' | 'small'
     }
-    const MyButton: any = classnamed('button')`
+    const MyButton = classnamed('button')`
       btn shadow
       ${(props: myButtonProps) => ({
         big: 'btn-lg',
         small: 'btn-sm',
       }[props.size || ''] || '')}
-    `
+    ` as React.SFC<myButtonProps>
+
     expect(create(
       <MyButton size="small">small</MyButton>
     ).toJSON()).toMatchSnapshot();
