@@ -16,10 +16,12 @@
     "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
     "test:watch": "react-scripts-ts test --env=jsdom",
     "build": "rollup -c",
+    "ci:build": "rollup -c && npm run predeploy",
     "start": "rollup -c -w",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "cover": "jest --coverage --coverageReporters html lcov && codecov"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -35,6 +37,7 @@
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
+    "codecov": "^3.1.0",
     "gh-pages": "2.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

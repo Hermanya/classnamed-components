@@ -2,8 +2,11 @@
 
 > Make react components with functional CSS
 
-[![NPM](https://img.shields.io/npm/v/classnamed-components.svg)](https://www.npmjs.com/package/classnamed-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![Size](http://img.badgesize.io/Hermanya/classnamed-components/master/src/index.tsx.svg?label=size)
+[![NPM](https://img.shields.io/npm/v/classnamed-components.svg)](https://www.npmjs.com/package/classnamed-components)
+![npm](https://img.shields.io/npm/dt/classnamed-components.svg)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![size](https://img.badgesize.io/hermanya/classnamed-components/master/src/index.tsx.svg)
+
 
 [Website with examples](https://hermanya.github.io/classnamed-components/)
 
