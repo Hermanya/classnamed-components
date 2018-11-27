@@ -23,6 +23,16 @@ npm install classnamed-components
 import * as React from 'react'
 import classNamed from 'classnamed-components'
 
+const MySection = classNamed("section")`px-6 py-4 bg-white`;
+// INSTEAD OF
+// const MySection = ({className, ...props}) => {
+//   return <section
+//     className={`px-6 py-4 bg-white ${className}`}
+//     {...props}
+//   />
+// }
+
+// You can use props to have dynamic class names
 const MyButton = classNamed('button')`
   btn shadow
   ${props => ({
@@ -30,7 +40,6 @@ const MyButton = classNamed('button')`
     small: 'btn-sm',
   }[props.size])}
 `
-const MySection = classNamed("section")`px-6 py-4 bg-white`;
 
 const MyExample = (props) => (
   <MySection/>
